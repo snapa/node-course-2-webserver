@@ -52,6 +52,13 @@ app.get("/about", (req, res) => {
     });
 });
 
+//Create a get request for the projects page.
+app.get("/projects", (req, res) => {
+    res.render("projects.hbs", {
+        pageTitle: "Projects page from exp.",
+        welcomeMessage: "This is the projects page!"
+    });
+});
 
 //Create a route for bad request, send back JSON with error message.
 app.get("/bad", (req, res) => {
